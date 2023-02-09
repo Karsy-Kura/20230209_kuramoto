@@ -16,100 +16,103 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11"></script>
   </head>
   <body>
-    <!-- header -->
-    <div id="header">
+    <div id="app">
+      <!-- header -->
       <header-template></header-template>
-    </div>
 
-    <!-- firstview -->
-    <div class="firstview">
-      <div class="firstview__topic">
-        <h1>最新のテクノロジーで社会問題を解決</h1>
-        <h2 class="common__text">
-          Solving social issues with the latest technology
-        </h2>
+      <!-- scroll to top button -->
+      <scrollbtn-template></scrollbtn-template>
+
+      <!-- firstview -->
+      <div class="firstview">
+        <div class="firstview__topic">
+          <h1>最新のテクノロジーで社会問題を解決</h1>
+          <h2 class="common__text">
+            Solving social issues with the latest technology
+          </h2>
+        </div>
       </div>
-    </div>
 
-    <!-- idea -->
-    <div class="common__section idea">
-      <div class="common__content idea__content">
-        <h1 class="common__topic">株式会社TECHの想い</h1>
-        <p class="common__text">
-          あらゆる産業において，新たなデジタル技術を使ってこれまでにないビジネスモデルを展開する新規参入者が登場し，ゲームチェンジが起ころうとしています．
-          こうした中で，各企業は，競争力維持・強化のためにDXを迅速に進めていくことが求められています．
-          しかし，DXにおいて投資コストは非常にかかります．
-          株式会社TECHでは，独自のオペレーションと人材教育により，他社よりも価格を抑えた開発を行います．
-        </p>
+      <!-- idea -->
+      <div class="common__section idea">
+        <div class="common__content idea__content">
+          <h1 class="common__topic">株式会社TECHの想い</h1>
+          <p class="common__text">
+            あらゆる産業において，新たなデジタル技術を使ってこれまでにないビジネスモデルを展開する新規参入者が登場し，ゲームチェンジが起ころうとしています．
+            こうした中で，各企業は，競争力維持・強化のためにDXを迅速に進めていくことが求められています．
+            しかし，DXにおいて投資コストは非常にかかります．
+            株式会社TECHでは，独自のオペレーションと人材教育により，他社よりも価格を抑えた開発を行います．
+          </p>
+        </div>
       </div>
-    </div>
 
-    <!-- service -->
-    <div class="common__section service">
-      <h1 class="common__topic">サービス</h1>
-      <div class="common__content service__content" id="service-content">
-        <card-template-service
-          imgsrc="./img/service1.png"
-          topic="IT人材育成事業"
-          context="これまでに培った教育手法を生かして，短期間で即戦力のIT人材を育成します．"
-        ></card-template-service>
-        <card-template-service
-          imgsrc="./img/service2.png"
-          topic="コーチング事業"
-          context="目標達成を最短で実現するために，プロのコーチに夜マンツーマンのサポートを実施します．"
-        ></card-template-service>
-        <card-template-service
-          imgsrc="./img/service3.png"
-          topic="ITコンサル事業"
-          context="経営戦略にIT戦略を策定し，システム開発の提案やシステムの最適化を通じて，企業の経営をサポートします．"
-        ></card-template-service>
-        <card-template-service
-          imgsrc="./img/service4.png"
-          topic="デジタルトランスフォーメーション事業"
-          context="人々の生活をよりよいものに変革するために様々なデジタル技術を活用し，革新的なソリューションやサービスを生み出します．"
-        ></card-template-service>
+      <!-- service -->
+      <div class="common__section service">
+        <h1 class="common__topic">サービス</h1>
+        <div class="common__content service__content" id="service-content">
+          <card-template-service
+            imgsrc="./img/service1.png"
+            topic="IT人材育成事業"
+            context="これまでに培った教育手法を生かして，短期間で即戦力のIT人材を育成します．"
+          ></card-template-service>
+          <card-template-service
+            imgsrc="./img/service2.png"
+            topic="コーチング事業"
+            context="目標達成を最短で実現するために，プロのコーチに夜マンツーマンのサポートを実施します．"
+          ></card-template-service>
+          <card-template-service
+            imgsrc="./img/service3.png"
+            topic="ITコンサル事業"
+            context="経営戦略にIT戦略を策定し，システム開発の提案やシステムの最適化を通じて，企業の経営をサポートします．"
+          ></card-template-service>
+          <card-template-service
+            imgsrc="./img/service4.png"
+            topic="デジタルトランスフォーメーション事業"
+            context="人々の生活をよりよいものに変革するために様々なデジタル技術を活用し，革新的なソリューションやサービスを生み出します．"
+          ></card-template-service>
+        </div>
+        <a href="./service.html" class="common__button">サービス一覧を見る</a>
       </div>
-      <a href="./service.html" class="common__button">サービス一覧を見る</a>
-    </div>
 
-    <!-- blog -->
-    <div class="common__section blog">
-      <h1 class="common__topic">社員ブログ</h1>
-      <div class="common__content blog__content" id="blog-content">
-        <card-template-blog
-          imgsrc="./img/blog.png"
-          date="2019/07/17"
-          topic="会社を創業した理由"
-        ></card-template-blog>
-        <card-template-blog
-          imgsrc="./img/blog.png"
-          date="2019/11/11"
-          topic="ITエンジニアを育成する最強メソッド"
-        ></card-template-blog>
-        <card-template-blog
-          imgsrc="./img/blog.png"
-          date="2020/08/01"
-          topic="コーチングによるモチベーション向上理論"
-        ></card-template-blog>
+      <!-- blog -->
+      <div class="common__section blog">
+        <h1 class="common__topic">社員ブログ</h1>
+        <div class="common__content blog__content" id="blog-content">
+          <card-template-blog
+            imgsrc="./img/blog.png"
+            date="2019/07/17"
+            topic="会社を創業した理由"
+          ></card-template-blog>
+          <card-template-blog
+            imgsrc="./img/blog.png"
+            date="2019/11/11"
+            topic="ITエンジニアを育成する最強メソッド"
+          ></card-template-blog>
+          <card-template-blog
+            imgsrc="./img/blog.png"
+            date="2020/08/01"
+            topic="コーチングによるモチベーション向上理論"
+          ></card-template-blog>
+        </div>
+        <a href="./blog.html" class="common__button">社員ブログ一覧を見る</a>
       </div>
-      <a href="./blog.html" class="common__button">社員ブログ一覧を見る</a>
-    </div>
 
-    <!-- company -->
-    <div class="common__section company">
-      <a href="./company.html" class="common__button company__button">会社概要</a>
-    </div>
+      <!-- company -->
+      <div class="common__section company">
+        <a href="./company.html" class="common__button company__button"
+          >会社概要</a
+        >
+      </div>
 
-    <!-- inquery -->
-    <div id="inquery">
+      <!-- inquery -->
       <inquery-template></inquery-template>
-    </div>
 
-    <!-- footer -->
-    <div id="footer">
+      <!-- footer -->
       <footer-template></footer-template>
+
+      <!-- script -->
+      <script src="./js/include.js"></script>
+      <script src="./js/index.js"></script>
     </div>
-    <script src="./js/include.js"></script>
-    <script src="./js/index.js"></script>
   </body>
 </html>

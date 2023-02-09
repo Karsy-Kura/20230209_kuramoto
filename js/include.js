@@ -1,7 +1,6 @@
 // header.
-{
-  Vue.component("header-template", {
-    template: `
+var componentHeader = {
+  template: `
       <header class="header">
         <h1 class="header__title">TECH</h1>
         <nav class="header__nav" id="header__nav">
@@ -19,24 +18,18 @@
         </div>
       </header>
     `,
-  });
+};
 
-  new Vue({
-    el: "#header",
-  });
-
-  const target = document.getElementById("header__menu");
-  target.addEventListener("click", () => {
-    target.classList.toggle("open");
-    const nav = document.getElementById("header__nav");
-    nav.classList.toggle("in");
-  });
-}
+// sctoll button.
+var commponentScrollBtn = {
+  template: `
+    <button class="scroll-top" id="scroll-top">↑</button>
+  `,
+};
 
 // inquery.
-{
-  Vue.component("inquery-template", {
-    template: `
+var componentInquery = {
+  template: `
       <div class="common__section inquery">
         <h1 class="common__topic">お問い合わせ</h1>
         <p class="common__text">
@@ -83,12 +76,61 @@
         </div>
       </div>
     `,
-  });
+};
 
-  new Vue({
-    el: "#inquery",
-  });
+// footer.
 
+var componentFooter = {
+  template: `
+    <footer class="footer">
+      <small>&copy; 2020 TECH inc.</small>
+      <ul class="footer__link">
+        <li class="footer__link__listitem"><a href="index.html">ホーム</a></li>
+        <li class="footer__link__listitem"><a href="service.html">事業内容</a></li>
+        <li class="footer__link__listitem"><a href="blog.html">社員ブログ</a></li>
+        <li class="footer__link__listitem"><a href="company.html">会社概要</a></li>
+      </ul>
+    </footer>
+  `,
+};
+
+new Vue({
+  el: "#app",
+  components: {
+    "header-template": componentHeader,
+    "scrollbtn-template": commponentScrollBtn,
+    "inquery-template": componentInquery,
+    "footer-template": componentFooter,
+  },
+});
+
+// add click event.
+// - header menu.
+{
+  const target = document.getElementById("header__menu");
+  target.addEventListener("click", () => {
+    target.classList.toggle("open");
+    const nav = document.getElementById("header__nav");
+    nav.classList.toggle("in");
+    const btnScroll = document.getElementById("scroll-top");
+    btnScroll.classList.toggle("off");
+  });
+}
+
+// - scroll to top.
+{
+  function scrollTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+  const target = document.getElementById("scroll-top");
+  target.addEventListener("click", scrollTop);
+}
+
+// - modal window.
+{
   const opneBtn = document.getElementById("modal__openBtn");
   const closeBtn = document.getElementById("modal__closeBtn");
   const modal = document.getElementById("modal__window");
@@ -108,26 +150,5 @@
     ) {
       modal.style.display = "none";
     }
-  });
-}
-
-// footer.
-{
-  Vue.component("footer-template", {
-    template: `
-    <footer class="footer">
-      <small>&copy; 2020 TECH inc.</small>
-      <ul class="footer__link">
-        <li class="footer__link__listitem"><a href="index.html">ホーム</a></li>
-        <li class="footer__link__listitem"><a href="service.html">事業内容</a></li>
-        <li class="footer__link__listitem"><a href="blog.html">社員ブログ</a></li>
-        <li class="footer__link__listitem"><a href="company.html">会社概要</a></li>
-      </ul>
-    </footer>
-  `,
-  });
-
-  new Vue({
-    el: "#footer",
   });
 }
