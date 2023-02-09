@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inquery</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/inquery.css" />
+  </head>
+  <body>
+    <div class="common__section inquery">
+      <h1 class="common__topic">お問い合わせ</h1>
+      <p class="common__text">
+        お仕事のご依頼や採用に関してはお問い合わせにて承っております．
+      </p>
+      <a class="common__button" id="modal__openBtn">お問い合わせ</a>
+
+      <!-- modal -->
+      <div class="inquery__modal" id="modal__window">
+        <div class="inquery__modal__content">
+          <div class="inquery__modal__content-inner">
+            <div class="modal__exit">
+              <button class="modal__exit__button" id="modal__closeBtn">
+                &Cross;
+              </button>
+            </div>
+
+            <h1 class="modal__topic">お問い合わせ</h1>
+            <form action="index.html" method="post" class="modal__form">
+              <div>
+                <label class="modal__form__topic">会社名</label>
+                <input type="text" name="company" class="modal__form__input" />
+              </div>
+
+              <div>
+                <label class="modal__form__topic modal__form-required" >お名前</label >
+                <input type="text" name="name" class="modal__form__input" required />
+              </div>
+
+              <div>
+                <label class="modal__form__topic modal__form-required" >メールアドレス</label >
+                <input type="email" name="email" class="modal__form__input" required />
+              </div>
+
+              <div>
+                <label class="modal__form__topic modal__form-required" >お問い合わせ内容</label >
+                <textarea class="modal__form__textarea" name="content" rows="8" required ></textarea>
+              </div>
+
+              <button class="common__button modal__form__button" type="submit"> お申し込み </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./inquery.js"></script>
+  </body>
+</html>
