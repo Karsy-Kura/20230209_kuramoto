@@ -1,6 +1,8 @@
-// header.
-var componentHeader = {
-  template: `
+// Vue Components.
+{
+  // header.
+  var componentHeader = {
+    template: `
       <header class="header">
         <h1 class="header__title">TECH</h1>
         <nav class="header__nav" id="header__nav">
@@ -18,18 +20,18 @@ var componentHeader = {
         </div>
       </header>
     `,
-};
+  };
 
-// sctoll button.
-var commponentScrollBtn = {
-  template: `
+  // sctoll button.
+  var commponentScrollBtn = {
+    template: `
     <button class="scroll-top" id="scroll-top">↑</button>
   `,
-};
+  };
 
-// inquery.
-var componentInquery = {
-  template: `
+  // inquery.
+  var componentInquery = {
+    template: `
       <div class="common__section inquery">
         <h1 class="common__topic">お問い合わせ</h1>
         <p class="common__text">
@@ -76,12 +78,11 @@ var componentInquery = {
         </div>
       </div>
     `,
-};
+  };
 
-// footer.
-
-var componentFooter = {
-  template: `
+  // footer.
+  var componentFooter = {
+    template: `
     <footer class="footer">
       <small>&copy; 2020 TECH inc.</small>
       <ul class="footer__link">
@@ -92,17 +93,18 @@ var componentFooter = {
       </ul>
     </footer>
   `,
-};
+  };
 
-new Vue({
-  el: "#app",
-  components: {
-    "header-template": componentHeader,
-    "scrollbtn-template": commponentScrollBtn,
-    "inquery-template": componentInquery,
-    "footer-template": componentFooter,
-  },
-});
+  new Vue({
+    el: "#app",
+    components: {
+      "header-template": componentHeader,
+      "scrollbtn-template": commponentScrollBtn,
+      "inquery-template": componentInquery,
+      "footer-template": componentFooter,
+    },
+  });
+}
 
 // add click event.
 // - header menu.

@@ -11,22 +11,50 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/inquery.css">
+    <link rel="stylesheet" href="./css/blog.css">
     <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11"></script>
   </head>
   <body>
-    <!-- header -->
-    <div id="header">
+    <div id="app">
+      <!-- header -->
       <header-template></header-template>
-    </div>
-    <!-- inquery -->
-    <div id="inquery">
+
+      <!-- scroll to top button -->
+      <scrollbtn-template></scrollbtn-template>
+
+      <!-- main -->
+      <div class="common__section">
+        <div class="common__content blog__content" id="blog-content">
+          <card-template-blog
+            imgsrc="./img/blog.png"
+            date="2019/07/17"
+            topic="会社を創業した理由"
+          ></card-template-blog>
+          <card-template-blog
+            imgsrc="./img/blog.png"
+            date="2019/11/11"
+            topic="ITエンジニアを育成する最強メソッド"
+          ></card-template-blog>
+          <card-template-blog
+            imgsrc="./img/blog.png"
+            date="2020/08/01"
+            topic="コーチングによるモチベーション向上理論"
+          ></card-template-blog>
+        </div>
+        <a href="./blog.html" class="common__button">社員ブログ一覧を見る</a>
+      </div>
+
+
+      <!-- inquery -->
       <inquery-template></inquery-template>
-    </div>
-    <!-- footer -->
-    <div id="footer">
+
+      <!-- footer -->
       <footer-template></footer-template>
+
+      <!-- script -->
+      <script src="./js/include.js"></script>
+      <script src="./js/blog.js"></script>
     </div>
-    <script src="./js/include.js"></script>
   </body>
 </html>

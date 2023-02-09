@@ -59,27 +59,6 @@
   vertical-align: middle;
 }
 
-/* blog */
-.blog__content {
-  display:flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.blog__card {
-  width: 30%;
-  margin: 10px 0;
-  text-align: left;
-}
-.blog__card__img {
-  width: 100%;
-}
-.blog__card__date {
-  font-size: 16px;
-}
-.blog__card__topic {
-  font-size: 20px;
-}
-
 /* company */
 .company__button {
   width: 100%;
