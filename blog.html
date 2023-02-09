@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/inquery.css">
-    <link rel="stylesheet" href="./css/blog.css">
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/inquery.css" />
+    <link rel="stylesheet" href="./css/blog.css" />
     <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11"></script>
   </head>
@@ -24,6 +24,10 @@
       <scrollbtn-template></scrollbtn-template>
 
       <!-- main -->
+      <div class="common__firstview">
+        <h1 class="common__topic">社員ブログ</h1>
+      </div>
+
       <div class="common__section">
         <div class="common__content blog__content" id="blog-content">
           <card-template-blog
@@ -41,20 +45,33 @@
             date="2020/08/01"
             topic="コーチングによるモチベーション向上理論"
           ></card-template-blog>
+          <card-template-blog
+            imgsrc="./img/blog.png"
+            date="2020/09/10"
+            topic="プログラミング言語習得論"
+          ></card-template-blog>
+          <card-template-blog
+            imgsrc="./img/blog.png"
+            date="2020/12/01"
+            topic="エンジニア採用における注意点"
+          ></card-template-blog>
+          <card-template-blog
+            imgsrc="./img/blog.png"
+            date="2021/01/01"
+            topic="今年の抱負"
+          ></card-template-blog>
         </div>
-        <a href="./blog.html" class="common__button">社員ブログ一覧を見る</a>
       </div>
-
 
       <!-- inquery -->
       <inquery-template></inquery-template>
 
       <!-- footer -->
       <footer-template></footer-template>
-
-      <!-- script -->
-      <script src="./js/include.js"></script>
-      <script src="./js/blog.js"></script>
     </div>
+
+    <!-- script -->
+    <script src="./js/include.js"></script>
+    <script src="./js/blog.js"></script>
   </body>
 </html>

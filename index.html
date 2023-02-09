@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/inquery.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/service.css" />
     <link rel="stylesheet" href="./css/blog.css" />
     <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11"></script>
@@ -48,35 +49,35 @@
       </div>
 
       <!-- service -->
-      <div class="common__section service">
+      <div class="common__section">
         <h1 class="common__topic">サービス</h1>
         <div class="common__content service__content" id="service-content">
           <card-template-service
             imgsrc="./img/service1.png"
             topic="IT人材育成事業"
-            context="これまでに培った教育手法を生かして，短期間で即戦力のIT人材を育成します．"
+            text="これまでに培った教育手法を生かして，短期間で即戦力のIT人材を育成します．"
           ></card-template-service>
           <card-template-service
             imgsrc="./img/service2.png"
             topic="コーチング事業"
-            context="目標達成を最短で実現するために，プロのコーチに夜マンツーマンのサポートを実施します．"
+            text="目標達成を最短で実現するために，プロのコーチに夜マンツーマンのサポートを実施します．"
           ></card-template-service>
           <card-template-service
             imgsrc="./img/service3.png"
             topic="ITコンサル事業"
-            context="経営戦略にIT戦略を策定し，システム開発の提案やシステムの最適化を通じて，企業の経営をサポートします．"
+            text="経営戦略にIT戦略を策定し，システム開発の提案やシステムの最適化を通じて，企業の経営をサポートします．"
           ></card-template-service>
           <card-template-service
             imgsrc="./img/service4.png"
             topic="デジタルトランスフォーメーション事業"
-            context="人々の生活をよりよいものに変革するために様々なデジタル技術を活用し，革新的なソリューションやサービスを生み出します．"
+            text="人々の生活をよりよいものに変革するために様々なデジタル技術を活用し，革新的なソリューションやサービスを生み出します．"
           ></card-template-service>
         </div>
         <a href="./service.html" class="common__button">サービス一覧を見る</a>
       </div>
 
       <!-- blog -->
-      <div class="common__section blog">
+      <div class="common__section">
         <h1 class="common__topic">社員ブログ</h1>
         <div class="common__content blog__content" id="blog-content">
           <card-template-blog
@@ -110,11 +111,12 @@
 
       <!-- footer -->
       <footer-template></footer-template>
-
-      <!-- script -->
-      <script src="./js/include.js"></script>
-      <script src="./js/index.js"></script>
-      <script src="./js/blog.js"></script>
     </div>
+
+    <!-- script -->
+    <script src="./js/include.js"></script>
+    <script src="./js/service.js"></script>
+    <script src="./js/blog.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

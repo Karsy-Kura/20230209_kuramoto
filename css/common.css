@@ -4,6 +4,27 @@ body {
   line-height: 1.6;
 }
 
+a {
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.common__firstview {
+  width: 100%;
+  padding: 100px 0;
+  background: url("../img/mv.png") center / cover;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.common__firstview h1 {
+  color: #fff;
+}
+
 .common__section {
   width: 100%;
   text-align: center;
@@ -34,6 +55,5 @@ body {
   background-color: #cd0323;
   text-align: center;
   display: inline-block;
-  text-decoration: none;
   cursor: pointer;
 }

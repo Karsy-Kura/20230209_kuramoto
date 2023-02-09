@@ -4,7 +4,7 @@
   var componentHeader = {
     template: `
       <header class="header">
-        <h1 class="header__title">TECH</h1>
+        <h1 class="header__title"><a href="index.html">TECH</a></h1>
         <nav class="header__nav" id="header__nav">
           <ul>
             <li class="header__nav__listitem"><a href="index.html">ホーム</a></li>
@@ -127,8 +127,22 @@
       behavior: "smooth",
     });
   }
-  const target = document.getElementById("scroll-top");
+  let target = document.getElementById("scroll-top");
   target.addEventListener("click", scrollTop);
+
+  function swicthOpacityByPosition() {
+    const windowHeight = window.innerHeight;
+    const offsetHeight = document.getElementById("app").offsetHeight;
+
+    if (offsetHeight < windowHeight) {
+      target.style.display = "none";
+    } else {
+      target.style.display = "block";
+    }
+  }
+
+  window.addEventListener("load", swicthOpacityByPosition);
+  window.addEventListener("resize", swicthOpacityByPosition);
 }
 
 // - modal window.

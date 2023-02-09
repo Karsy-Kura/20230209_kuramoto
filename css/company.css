@@ -1,0 +1,26 @@
+/* company */
+.company__table {
+  width: 90%;
+  font-size: 20px;
+  border-collapse: collapse;
+}
+.company__table tr {
+  border: 1px none black;
+  border-bottom-style: solid;
+}
+.company__table tr:first-child {
+  border-top-style: solid;
+}
+
+th, td {
+  line-height: 3.0;
+  vertical-align: middle;
+}
+th {
+  width: 30%;
+  text-align: center;
+}
+td { 
+  width: 70%;
+  text-align: left;
+}
